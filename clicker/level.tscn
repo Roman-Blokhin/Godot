@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://bpl0xx3l42e86"]
+
+[ext_resource type="Texture2D" uid="uid://rvk00iue66oy" path="res://Pixel Art Space/screen.jpg" id="1_nxyly"]
+[ext_resource type="Script" path="res://level.gd" id="1_pwd8b"]
+[ext_resource type="Texture2D" uid="uid://60hkgikig2u6" path="res://Pixel Art Space/Sun2.png" id="2_sx0js"]
+[ext_resource type="Texture2D" uid="uid://byc8onqq6ms3e" path="res://Pixel Art Space/Sun1.png" id="3_nm6w5"]
+[ext_resource type="FontFile" uid="uid://4ldtwt85co5f" path="res://19876.otf" id="5_iyxlp"]
+[ext_resource type="Texture2D" uid="uid://buuetatfrtsio" path="res://Pixel Art Space/e1.png" id="6_0g155"]
+[ext_resource type="Texture2D" uid="uid://bsjvh5junepas" path="res://Pixel Art Space/e2.png" id="7_ryi5a"]
+
+[node name="level" type="Node2D"]
+script = ExtResource("1_pwd8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Screen" type="Sprite2D" parent="."]
+position = Vector2(309, 448)
+scale = Vector2(0.8625, 0.910156)
+texture = ExtResource("1_nxyly")
+
+[node name="button" type="TouchScreenButton" parent="."]
+position = Vector2(358, 295)
+scale = Vector2(2.5375, 2.5625)
+texture_normal = ExtResource("2_sx0js")
+texture_pressed = ExtResource("3_nm6w5")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 132.0
+offset_right = 247.0
+offset_bottom = 231.0
+theme_override_fonts/font = ExtResource("5_iyxlp")
+theme_override_font_sizes/font_size = 40
+text = "Score: "
+
+[node name="exitButton" type="TouchScreenButton" parent="."]
+position = Vector2(498, 17)
+texture_normal = ExtResource("6_0g155")
+texture_pressed = ExtResource("7_ryi5a")
+
+[connection signal="pressed" from="button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="exitButton" to="." method="_on_exit_button_pressed"]

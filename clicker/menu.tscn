@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu453iq88mixb"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_axgn4"]
+[ext_resource type="Texture2D" uid="uid://rvk00iue66oy" path="res://Pixel Art Space/screen.jpg" id="2_aqvc1"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_axgn4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(298, 468)
+scale = Vector2(0.838889, 0.885156)
+texture = ExtResource("2_aqvc1")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -97.7484
+offset_top = 27.1139
+offset_right = 117.252
+offset_bottom = 62.1139
+theme_override_font_sizes/font_size = 25
+text = "Click to continue.."
+horizontal_alignment = 1
+
+[node name="play" type="Button" parent="."]
+offset_left = 136.0
+offset_top = 183.0
+offset_right = 480.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[node name="play2" type="Button" parent="."]
+offset_left = 136.0
+offset_top = 328.0
+offset_right = 480.0
+offset_bottom = 429.0
+theme_override_font_sizes/font_size = 50
+text = "QUIT"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="play2" to="." method="_on_play_pressed"]
