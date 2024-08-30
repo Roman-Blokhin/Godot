@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://djiquube6ndyp"]
+[gd_scene load_steps=13 format=3 uid="uid://djiquube6ndyp"]
 
 [ext_resource type="PackedScene" uid="uid://bmb1c2hkiniv5" path="res://Player/player.tscn" id="1_he55n"]
 [ext_resource type="Script" path="res://Player/player.gd" id="2_aoi56"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://rbrmlpxeujoq" path="res://oak_woods/oak_woods_tileset.png" id="6_c6lj2"]
 [ext_resource type="PackedScene" uid="uid://dhhbwx2bm2kea" path="res://Player2/ant.tscn" id="7_qsjng"]
 [ext_resource type="Script" path="res://Player2/ant.gd" id="8_xb2v5"]
+[ext_resource type="PackedScene" uid="uid://bi5buneglapiy" path="res://Player3/monster1.tscn" id="9_r84ja"]
+[ext_resource type="Script" path="res://Player3/monster_1.gd" id="10_eqwl3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3g1jr"]
 texture = ExtResource("6_c6lj2")
@@ -862,6 +864,10 @@ layer_0/tile_data = PackedInt32Array(2359296, 0, 1, 2359297, 131072, 0, 2359298,
 position = Vector2(373, 345)
 script = ExtResource("2_aoi56")
 
-[node name="Player2" parent="." instance=ExtResource("7_qsjng")]
+[node name="Ant" parent="." instance=ExtResource("7_qsjng")]
 position = Vector2(645, 359)
 script = ExtResource("8_xb2v5")
+
+[node name="Monster" parent="." instance=ExtResource("9_r84ja")]
+position = Vector2(904, 358)
+script = ExtResource("10_eqwl3")

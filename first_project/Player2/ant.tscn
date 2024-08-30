@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cg4jw8qjof2jo" path="res://oak_woods/character/New Piskel (2)-vert.png" id="1_no43m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rcyf0"]
+height = 80.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yopxw"]
 atlas = ExtResource("1_no43m")
@@ -32,8 +33,8 @@ animations = [{
 shape = SubResource("CapsuleShape2D_rcyf0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1.75, -2.75)
-scale = Vector2(0.307292, 0.380208)
+position = Vector2(-24.25, -6.8125)
+scale = Vector2(0.911458, 1.02474)
 sprite_frames = SubResource("SpriteFrames_efuns")
 animation = &"play"
 autoplay = "play"

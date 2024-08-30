@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bmb1c2hkiniv5"]
+[gd_scene load_steps=26 format=3 uid="uid://bmb1c2hkiniv5"]
 
 [ext_resource type="Texture2D" uid="uid://qwlf2o1ehdol" path="res://oak_woods/character/char_blue.png" id="1_wd4ws"]
 
@@ -176,8 +176,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_i5a8t"]
-
 [node name="Player" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -186,9 +184,7 @@ shape = SubResource("CapsuleShape2D_ivl8q")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -14)
 sprite_frames = SubResource("SpriteFrames_awsxu")
-animation = &"Jump"
+animation = &"Idle"
 autoplay = "Idle"
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(32, -18)
-sprite_frames = SubResource("SpriteFrames_i5a8t")
+frame = 5
+frame_progress = 0.00219256
