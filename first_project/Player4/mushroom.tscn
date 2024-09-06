@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://5tmxg3t3d46m"]
+
+[ext_resource type="Texture2D" uid="uid://cy8v8xtu50ijo" path="res://oak_woods/character/MushroomIdleMoving.png" id="1_ksm2a"]
+[ext_resource type="Script" path="res://Player4/character_body_2d.gd" id="1_q13kh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4u83u"]
+height = 70.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh4sr"]
+atlas = ExtResource("1_ksm2a")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g58r0"]
+atlas = ExtResource("1_ksm2a")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ih2hf"]
+atlas = ExtResource("1_ksm2a")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3ig0"]
+atlas = ExtResource("1_ksm2a")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ljqc8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sh4sr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g58r0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ih2hf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3ig0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Mushroom" type="Node2D"]
+position = Vector2(12, 14)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_q13kh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_4u83u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D"]
+position = Vector2(1, 11)
+sprite_frames = SubResource("SpriteFrames_ljqc8")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.591973

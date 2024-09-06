@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://djiquube6ndyp"]
+[gd_scene load_steps=14 format=3 uid="uid://djiquube6ndyp"]
 
 [ext_resource type="PackedScene" uid="uid://bmb1c2hkiniv5" path="res://Player/player.tscn" id="1_he55n"]
 [ext_resource type="Script" path="res://Player/player.gd" id="2_aoi56"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://Player2/ant.gd" id="8_xb2v5"]
 [ext_resource type="PackedScene" uid="uid://bi5buneglapiy" path="res://Player3/monster1.tscn" id="9_r84ja"]
 [ext_resource type="Script" path="res://Player3/monster_1.gd" id="10_eqwl3"]
+[ext_resource type="Script" path="res://button.gd" id="11_4wfo1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3g1jr"]
 texture = ExtResource("6_c6lj2")
@@ -871,3 +872,14 @@ script = ExtResource("8_xb2v5")
 [node name="Monster" parent="." instance=ExtResource("9_r84ja")]
 position = Vector2(904, 358)
 script = ExtResource("10_eqwl3")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 800.0
+offset_top = 56.0
+offset_right = 1088.0
+offset_bottom = 142.0
+theme_override_font_sizes/font_size = 50
+text = "2 level"
+script = ExtResource("11_4wfo1")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
